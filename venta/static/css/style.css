@@ -26,7 +26,9 @@ nav {
   color: var(--text);
 }
 
-.navbar-nav .nav-link.active, .navbar-nav .nav-link.show, .nav-link:hover {
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show,
+.nav-link:hover {
   color: var(--primary-button);
 }
 
@@ -34,6 +36,12 @@ nav {
   background-color: var(--primary-button);
   color: var(--text);
   border-radius: 5px;
+}
+
+.logo-bg {
+  background-color: var(--primary-button);
+  aspect-ratio: 1/1;
+  border-radius: 50%;
 }
 
 footer {
@@ -53,17 +61,20 @@ footer a:hover {
   border-radius: 4px;
 }
 
+@media (min-width: 1200px) {
+  .container-sm {
+    width: 1200px;
+  }
+}
+
 /* small */
 @media screen and (max-width: 767px) {
-
 }
 
 /* medium */
 @media screen and (min-width: 768px) and (max-width: 991px) {
-
 }
 
 /* large */
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-
 }
