@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', venta_views.inicio , name='index'),
     path('edificios/', edificio_views.edificio , name='properties'),
+    path('edificios/<int:property_id>', edificio_views.detail, name="detail"),
     path('contacto/', venta_views.contacto , name='contact'),
     path('acerca/', venta_views.acerca , name='about'),
 ]
