@@ -1,13 +1,56 @@
+:root {
+  --text: #ebedf9;
+  --secondary-text: #7d7d8d;
+  --background: #0b0f28;
+  --secondary-background: #0f1434;
+  --tertiary-background: hsla(231, 54%, 95%, 0.1);
+  --primary-button: #bb3547;
+  --accent: #296b1e;
+}
+
+body {
+  color: var(--text);
+  background-color: var(--background);
+}
+
+body > * + * {
+  margin: 1rem 0;
+}
+
+nav {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.nav-link {
+  color: var(--text);
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show, .nav-link:hover {
+  color: var(--primary-button);
+}
+
+.navbar-nav .nav-link.active {
+  background-color: var(--primary-button);
+  color: var(--text);
+  border-radius: 5px;
+}
+
 footer {
   font-size: 0.75rem;
-  color: aliceblue;
+  color: var(--text);
 }
 footer a {
   text-decoration: none;
-  color: rgb(125, 125, 141);
+  color: var(--secondary-text);
 }
 footer a:hover {
-  color: aliceblue;
+  color: var(--primary-button);
+}
+
+.secondary-bg {
+  background-color: var(--secondary-background);
+  border-radius: 4px;
 }
 
 /* small */

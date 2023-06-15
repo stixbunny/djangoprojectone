@@ -13,17 +13,17 @@
 <body>
   <header>
     <div class="container-sm text-center">
-      <img src="{% static './img/logo.png' %}" width="100" alt="">
+      <img src="{% static './img/logo.svg' %}" width="100" alt="">
     </div>
     {% include './navbar.html' %}
   </header>
   <main>
     <div class="container-sm">
       {% block content %}
-    {% endblock %}
+      {% endblock %}
     </div>
   </main>
-  <footer class="bg-dark">
+  <footer>
     {% include './footer.html' %}
   </footer>
   <!-- BOOTSTRAP JS -->
