@@ -1,0 +1,26 @@
+footer {
+  font-size: 0.75rem;
+  color: aliceblue;
+}
+footer a {
+  text-decoration: none;
+  color: rgb(125, 125, 141);
+}
+footer a:hover {
+  color: aliceblue;
+}
+
+/* small */
+@media screen and (max-width: 767px) {
+
+}
+
+/* medium */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* large */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+}
