@@ -10,11 +10,17 @@
 <p>Descripcion: {{ property.description }}</p>
 <p>Pisos: {{ property.floors }}</p>
 <p>Tipo: {{ property.type }}</p>
-<p>Capacidad: {{ property.capacity }}</p>
+<p>Industria: {{ property.industry }}</p>
 <p>propiedades</p>
 <ul>
   {% for key in property|as_dict %}
     <li>{{key}}</li>
     {% endfor %}
 </ul>
+{% if user.is_authenticated %}
+<input type="submit" value="comprar">
+{{ user.username }}
+{% else %}
+<div>Debes haber ingresado para poder comprar</div>
+{% endif %}
 {% endblock %}

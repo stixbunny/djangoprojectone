@@ -4,14 +4,14 @@
 <h1>properties</h1>
 <h2>Revisa acá nuestros edificios de entretenimiento:</h2>
 {% for entprop in EntProps %}
-{{ entprop.name }}
+<p><a href="/edificios/entretenimiento/{{entprop.id}}">{{ entprop.name }}</a></p>
 {% endfor %}
 <h2>Revisa acá nuestros edificios industriales:</h2>
 {% for indprop in IndProps %}
-{{ indprop.name }}
+<p><a href="/edificios/industrial/{{indprop.id}}">{{ indprop.name }}</a></p>
 {% endfor %}
 <h2>Revisa acá nuestros edificios residenciales:</h2>
 {% for resprop in ResProps %}
-{{ resprop.name }}
+<p><a href="/edificios/residencial/{{resprop.id}}">{{ resprop.name }}</a></p>
 {% endfor %}
 {% endblock %}

@@ -21,6 +21,15 @@
         <li class="nav-item">
           <a id="about-link" class="nav-link" href="{% url 'about' %}">Acerca de</a>
         </li>
+        {% if user.is_authenticated %}
+        <li class="nav-item">
+          <a id="logout-link" class="nav-link" href="{% url 'logout' %}">Salir</a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a id="login-link" class="nav-link" href="{% url 'login' %}">Ingresar</a>
+        </li>
+        {% endif %}
       </ul>
     </div>
   </div>

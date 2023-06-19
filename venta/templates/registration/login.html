@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div id="login-screen">
+	<h3>Ingresa tus datos a continuación</h3>
+	{% if form.errors %}
+	<p>Tu usuario o contraseña no coinciden, por favor intenta nuevamente.</p>
+	{% endif %}
+	<form action="" method="post">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<button type="submit">Ingresar</button>
+	</form>
+</div>
+{% endblock %}

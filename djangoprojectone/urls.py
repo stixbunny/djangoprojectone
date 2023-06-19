@@ -15,17 +15,30 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from venta import views as venta_views
 from edificio import views as edificio_views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', venta_views.inicio , name='index'),
-    path('edificios/', edificio_views.edificio , name='properties'),
-    path('edificios/entretenimiento/<int:property_id>', edificio_views.detail_ent, name="detail_ent"),
-    path('edificios/industrial/<int:property_id>', edificio_views.detail_ind, name="detail_ind"),
-    path('edificios/residencial/<int:property_id>', edificio_views.detail_res, name="detail_res"),
-    path('contacto/', venta_views.contacto , name='contact'),
-    path('acerca/', venta_views.acerca , name='about'),
+    path("admin/", admin.site.urls),
+    path("", venta_views.inicio, name="index"),
+    path("cuenta/", include("django.contrib.auth.urls"), name="account"),
+    path("edificios/", edificio_views.edificio, name="properties"),
+    path(
+        "edificios/entretenimiento/<int:property_id>",
+        edificio_views.detail_ent,
+        name="detail_ent",
+    ),
+    path(
+        "edificios/industrial/<int:property_id>",
+        edificio_views.detail_ind,
+        name="detail_ind",
+    ),
+    path(
+        "edificios/residencial/<int:property_id>",
+        edificio_views.detail_res,
+        name="detail_res",
+    ),
+    path("contacto/", venta_views.contacto, name="contact"),
+    path("acerca/", venta_views.acerca, name="about"),
 ]

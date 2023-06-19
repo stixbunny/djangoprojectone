@@ -17,4 +17,10 @@
     <li>{{key}}</li>
     {% endfor %}
 </ul>
+{% if user.is_authenticated %}
+<input type="submit" value="comprar">
+{{ user.username }}
+{% else %}
+<div>Debes haber ingresado para poder comprar</div>
+{% endif %}
 {% endblock %}

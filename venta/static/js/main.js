@@ -10,6 +10,8 @@ if (current !== "") {
       link.classList.add("active");
     } else if (current === "acerca" && link.id === "about-link") {
       link.classList.add("active");
+    } else if (current === "cuenta" && link.id === "login-link") {
+      link.classList.add("active");
     }
   }
 }
