@@ -2,5 +2,16 @@
 {% load static %}
 {% block content %}
 <h1>properties</h1>
-<img src="{% static './img/torre1.jpg' %}" alt="">
+<h2>Revisa acá nuestros edificios de entretenimiento:</h2>
+{% for entprop in EntProps %}
+{{ entprop.name }}
+{% endfor %}
+<h2>Revisa acá nuestros edificios industriales:</h2>
+{% for indprop in IndProps %}
+{{ indprop.name }}
+{% endfor %}
+<h2>Revisa acá nuestros edificios residenciales:</h2>
+{% for resprop in ResProps %}
+{{ resprop.name }}
+{% endfor %}
 {% endblock %}
