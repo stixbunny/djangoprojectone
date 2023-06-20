@@ -8,6 +8,76 @@
   --accent: #296b1e;
 }
 
+/* ESTILOS */
+
+.secondary-bg {
+  background-color: var(--secondary-background);
+  border-radius: 4px;
+}
+
+h1 {
+  text-align: center;
+  text-wrap: balance;
+  /* color: var(--primary-button); */
+  /* text-shadow: 0 0 4px var(--text); */
+  margin-bottom: 1rem;
+}
+
+h3 {
+  margin-bottom: 1rem;
+}
+
+.card-body > h5 {
+  white-space: nowrap;
+  /* width: 100%; */
+  font-size: 1rem;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-body > h5::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  width: 15rem;
+  background-color: var(--tertiary-background);
+  color: var(--text);
+}
+
+.card > img {
+  width: 100%;
+  aspect-ratio: 1.5/1;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 0.5rem;
+}
+
+.list-group-item {
+  font-size: 0.85rem;
+  white-space: nowrap;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+}
+
+.list-group-item > span {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--secondary-text);
+}
+
+.list-group-item::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* BODY */
+
 body {
   color: var(--text);
   background-color: var(--background);
@@ -16,6 +86,8 @@ body {
 body > * + * {
   margin: 1rem 0;
 }
+
+/* NAVBAR */
 
 nav {
   color: var(--text);
@@ -44,6 +116,18 @@ nav {
   border-radius: 50%;
 }
 
+.nav-item {
+  display: flex;
+  align-self: end;
+}
+
+#logout-link {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+/* FOOTER */
+
 footer {
   font-size: 0.75rem;
   color: var(--text);
@@ -56,10 +140,9 @@ footer a:hover {
   color: var(--primary-button);
 }
 
-.secondary-bg {
-  background-color: var(--secondary-background);
-  border-radius: 4px;
-}
+/* PAGINAS */
+
+/* login */
 
 #login-screen {
   text-align: center;
@@ -69,6 +152,16 @@ footer a:hover {
   .container-sm {
     width: 1200px;
   }
+}
+
+/* edificios */
+
+.property-list {
+  margin-bottom: 1rem;
+}
+
+.price-on-card {
+  min-width: fit-content;
 }
 
 /* small */

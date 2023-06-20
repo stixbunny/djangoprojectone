@@ -1,17 +1,62 @@
 {% extends './base.html' %}
 {% load static %}
 {% block content %}
-<h1>properties</h1>
-<h2>Revisa acá nuestros edificios de entretenimiento:</h2>
-{% for entprop in EntProps %}
-<p><a href="/edificios/entretenimiento/{{entprop.id}}">{{ entprop.name }}</a></p>
-{% endfor %}
-<h2>Revisa acá nuestros edificios industriales:</h2>
-{% for indprop in IndProps %}
-<p><a href="/edificios/industrial/{{indprop.id}}">{{ indprop.name }}</a></p>
-{% endfor %}
-<h2>Revisa acá nuestros edificios residenciales:</h2>
-{% for resprop in ResProps %}
-<p><a href="/edificios/residencial/{{resprop.id}}">{{ resprop.name }}</a></p>
-{% endfor %}
+<h1>Las mejores propiedades las encuentras aquí</h1>
+<h3>Nuestros edificios de entretenimiento:</h3>
+<div class="property-list container-fluid py-2 overflow-auto">
+	<div class="d-flex flex-row flex-nowrap gap-2">
+		{% for entprop in EntProps %}
+		<a href="/edificios/entretenimiento/{{entprop.id}}">
+			<div class="h-100 card p-2">
+				<img src="{% static './img/entertainment.jpg' %}" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">{{ entprop.name }}</h5>
+					<ul class="list-group list-group-horizontal">
+						<li class="flex-fill list-group-item p-2"><span>Capacidad:</span>{{ entprop.capacity }}</li>
+						<li class="price-on-card list-group-item p-2"><span>Precio:</span>{{ entprop.price|floatformat }}</li>
+					</ul>
+				</div>
+			</div>
+		</a>
+		{% endfor %}
+	</div>
+</div>
+<h3>Nuestros edificios industriales:</h3>
+<div class="property-list container-fluid py-2 overflow-auto">
+	<div class="d-flex flex-row flex-nowrap gap-2">
+		{% for indprop in IndProps %}
+		<a href="/edificios/industrial/{{indprop.id}}">
+			<div class="h-100 card p-2">
+				<img src="{% static './img/industrial.jpg' %}" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">{{ indprop.name }}</h5>
+					<ul class="list-group list-group-horizontal">
+						<li class="flex-fill list-group-item p-2"><span>Industria:</span>{{ indprop.industry }}</li>
+						<li class="price-on-card list-group-item p-2"><span>Precio:</span>{{ indprop.price|floatformat }}</li>
+					</ul>
+				</div>
+			</div>
+		</a>
+		{% endfor %}
+	</div>
+</div>
+<h3>Nuestros edificios residenciales:</h3>
+<div class="property-list container-fluid py-2 overflow-auto">
+	<div class="d-flex flex-row flex-nowrap gap-2">
+		{% for resprop in ResProps %}
+		<a href="/edificios/residencial/{{resprop.id}}">
+			<div class="h-100 card p-2">
+				<img src="{% static './img/residential.jpg' %}" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">{{ resprop.name }}</h5>
+					<ul class="list-group list-group-horizontal">
+						<li class="flex-fill list-group-item p-2"><span>Hogares:</span>{{ resprop.total_rooms }}</li>
+						<li class="price-on-card list-group-item p-2"><span>Precio:</span>{{ resprop.price|floatformat }}</li>
+					</ul>
+				</div>
+			</div>
+		</a>
+		{% endfor %}
+	</div>
+</div>
 {% endblock %}
