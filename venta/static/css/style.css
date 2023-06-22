@@ -33,6 +33,20 @@ textarea {
   resize: none;
 }
 
+tbody, td, tfoot, th, thead, tr {
+  border: none;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+  background-color: var(--secondary-background);
+  color: var(--text);
+}
+
+.table>:not(caption)>*>* {
+  background-color: var(--tertiary-background);
+  color: var(--text);
+}
+
 .btn-primary {
   border: none;
   color: var(--text);
