@@ -75,6 +75,9 @@ textarea {
   white-space: nowrap;
   overflow-y: hidden;
   text-overflow: ellipsis;
+  color: var(--text);
+  background-color: var(--secondary-background);
+  border: none;
 }
 
 .list-group-item > span {
