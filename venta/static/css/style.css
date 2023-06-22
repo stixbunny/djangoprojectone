@@ -186,6 +186,12 @@ footer a:hover {
   max-width: min(100%, 600px);
 }
 
+#property-price {
+  background-color: #296b1e;
+  padding: 0.375rem 0.75rem;
+  width: fit-content;
+}
+
 #published-date {
   font-size: 0.75rem;
   color: var(--secondary-text);
