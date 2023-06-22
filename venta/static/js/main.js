@@ -15,3 +15,30 @@ if (current !== "") {
     }
   }
 }
+
+if(current === "contacto") {
+  select = document.getElementById("contact-select");
+  textarea = document.getElementById("contact-textarea");
+  console.log("corre")
+  textarea.disabled = true;
+  select.onchange = (event) => {
+    if (event.target.selectedIndex === 0) {
+      textarea.disabled = true;
+    }
+    else {
+      textarea.disabled = false;
+    }
+  }
+}
+
+// if (current === "contacto") {
+//   select = document.getElementsByTagName("select");
+//   textarea = document.getElementsByTagName("textarea");
+//   select.addEventListener();
+//   if (select.selectedIndex === 1) {
+//     textarea.disabled = true;
+//   }
+//   else (
+//     textarea.disabled = false;
+//   )
+// }

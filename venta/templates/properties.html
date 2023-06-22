@@ -8,7 +8,7 @@
 		{% for entprop in EntProps %}
 		<a href="/edificios/entretenimiento/{{entprop.id}}">
 			<div class="h-100 card p-2">
-				<img src="{% static './img/entertainment.jpg' %}" class="card-img-top" alt="...">
+				<img src="{{ entprop.image_url}}" class="card-img-top" alt="...">
 				<div class="card-body">
 					<h5 class="card-title">{{ entprop.name }}</h5>
 					<ul class="list-group list-group-horizontal">
@@ -27,7 +27,7 @@
 		{% for indprop in IndProps %}
 		<a href="/edificios/industrial/{{indprop.id}}">
 			<div class="h-100 card p-2">
-				<img src="{% static './img/industrial.jpg' %}" class="card-img-top" alt="...">
+				<img src="{{ indprop.image_url }}" class="card-img-top" alt="...">
 				<div class="card-body">
 					<h5 class="card-title">{{ indprop.name }}</h5>
 					<ul class="list-group list-group-horizontal">
@@ -46,7 +46,7 @@
 		{% for resprop in ResProps %}
 		<a href="/edificios/residencial/{{resprop.id}}">
 			<div class="h-100 card p-2">
-				<img src="{% static './img/residential.jpg' %}" class="card-img-top" alt="...">
+				<img src="{{ resprop.image_url}}" class="card-img-top" alt="...">
 				<div class="card-body">
 					<h5 class="card-title">{{ resprop.name }}</h5>
 					<ul class="list-group list-group-horizontal">

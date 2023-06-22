@@ -1,19 +1,25 @@
 {% extends './base.html' %}
 {% load static %}
 {% block content %}
-<h1>Contactanos</h1>
-<form action="">
+<h1>Contáctanos</h1>
+<form action="" class="col-9 col-sm-8 col-lg-6 col-xl-4 mx-auto">
   <p>Si tienes alguna pregunta, duda, consulta, inquietud, felicitación o reclamo, por favor ingresala a continuación y nuestro equipo te respondera a la brevedad.</p>
-  <label for="">Tipo</label>
-  <select name="" id="">
-    <option value="">pregunta</option>
-    <option value="">duda</option>
-    <option value="">consulta</option>
-    <option value="">inquietud</option>
-    <option value="">felicitación</option>
-    <option value="">reclamo</option>
-  </select>
-  <label for="">¿Que necesitamos saber?</label>
-  <textarea name="" id="" cols="30" rows="10"></textarea>
+  <div class="mb-3">
+    <label for="contact-select" class="form-label">Tipo</label>
+    <select class="form-select" id="contact-select">
+      <option selected>¿Que sucede?</option>
+      <option value="">Pregunta</option>
+      <option value="">Duda</option>
+      <option value="">Consulta</option>
+      <option value="">Inquietud</option>
+      <option value="">Felicitación</option>
+      <option value="">Reclamo</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="contact-textarea" class="form-label">¿Que necesitamos saber?</label>
+    <textarea cols="30" rows="10" class="form-control" id="contact-textarea"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 {% endblock %}

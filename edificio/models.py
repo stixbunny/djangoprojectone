@@ -5,8 +5,10 @@ class Property(models.Model):
     pub_date = models.DateTimeField("date published", auto_now_add=True, blank=True)
     price = models.DecimalField(max_digits=15, decimal_places=5)
     location = models.CharField(max_length=200)
+    image_url = models.URLField(null=True)
     description = models.CharField(max_length=500)
     floors = models.PositiveSmallIntegerField()
+    is_visible = models.BooleanField(null=True)
 
 class ResidentialProperty(Property):
     type = models.CharField(max_length=50, default='residential')

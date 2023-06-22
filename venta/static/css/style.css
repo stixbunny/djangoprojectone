@@ -25,6 +25,20 @@ h3 {
   margin-bottom: 1rem;
 }
 
+textarea {
+  resize: none;
+}
+
+.btn-primary {
+  border: none;
+  color: var(--text);
+  background-color: var(--primary-button);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent);
+}
+
 .card-body > h5 {
   white-space: nowrap;
   font-size: 1rem;
