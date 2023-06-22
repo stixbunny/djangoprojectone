@@ -1,6 +1,7 @@
 from django.http import Http404
 from django.shortcuts import render
 from .models import Property, EntertainmentProperty, IndustrialProperty, ResidentialProperty
+# from django.views.decorators.clickjacking import xframe_options_exempt
 
 def edificio(request):
     EntProps = EntertainmentProperty.objects.all()
@@ -25,6 +26,7 @@ def detail_ind(request, property_id):
     context = {'property': property}
     return render(request, 'property_ind.html', context)
 
+# @xframe_options_exempt
 def detail_res(request, property_id):
     try:
         property = ResidentialProperty.objects.get(pk=property_id)

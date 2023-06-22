@@ -3,20 +3,21 @@
 {% load debug %}
 {% block content %}
 <h1>¡Los mejores edificios en un solo lugar!</h1>
-<p>Nombre: {{ property.name }}</p>
+<p><h1>Nombre: {{ property.name }}</h1></p>
+<p><img src="{{ property.image_url }}" class="card-img-top" alt="..."></p>
+
 <p>Fecha: {{ property.pub_date }}</p>
 <p>Precio: {{ property.price }}</p>
 <p>Ubicacion: {{ property.location }}</p>
 <p>Descripcion: {{ property.description }}</p>
 <p>Pisos: {{ property.floors }}</p>
-<p>Tipo: {{ property.type }}</p>
-<p>Capacidad: {{ property.capacity }}</p>
-<p>propiedades</p>
-<ul>
+<!-- <p>Tipo: {{ property.type }}</p> -->
+<p>Capacidad: {{ property.capacity }} personas</p>
+<!-- <ul>
   {% for key in property|as_dict %}
     <li>{{key}}</li>
     {% endfor %}
-</ul>
+</ul> -->
 {% if user.is_authenticated %}
 <input type="submit" value="comprar">
 {{ user.username }}
