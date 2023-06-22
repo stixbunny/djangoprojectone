@@ -175,6 +175,20 @@ footer a:hover {
   margin-bottom: 1rem;
 }
 
+.property-list::-webkit-scrollbar {
+  height: 5px;
+  background-color: var(--tertiary-background);
+}
+
+.property-list::-webkit-scrollbar-thumb {
+  background-color: var(--accent);
+}
+
+.property-list::-webkit-scrollbar-track {
+  box-shadow: inset inset 0 4px black;
+  background-color: var(--tertiary-background);
+}
+
 .price-on-card {
   min-width: fit-content;
 }
