@@ -2,26 +2,47 @@
 {% load static %}
 {% load debug %}
 {% block content %}
-<h1>¡Los mejores edificios en un solo lugar!</h1>
-<p><h1>Nombre: {{ property.name }}</h1></p>
-<p><img src="{{ property.image_url }}" class="card-img-top" alt="..."></p>
 
-<p>Fecha: {{ property.pub_date }}</p>
-<p>Precio: {{ property.price }}</p>
-<p>Ubicacion: {{ property.location }}</p>
-<p>Descripcion: {{ property.description }}</p>
-<p>Pisos: {{ property.floors }}</p>
-<!-- <p>Tipo: {{ property.type }}</p> -->
-<p>Capacidad: {{ property.capacity }} personas</p>
-<!-- <ul>
-  {% for key in property|as_dict %}
-    <li>{{key}}</li>
-    {% endfor %}
-</ul> -->
-{% if user.is_authenticated %}
-<input type="submit" value="comprar">
-{{ user.username }}
-{% else %}
-<div>Debes haber ingresado para poder comprar</div>
-{% endif %}
+<div class="row justify-content-center align-items-center gy-3">
+  <div class="col-md-6 text-center">
+    <img id="property-img" src="{{ property.image_url}}" class="img-fluid object-fit-contain rounded mx-auto" alt="">
+  </div>
+  <div class="col-md-6">
+    <h3 class="text-center">{{ property.name }}</h3>
+    <p>{{ property.description }}</p>
+    <table id="property-table" class="table table-striped table-hover">
+      <tbody>
+        <tr>
+          <td>Pisos</td>
+          <td>{{ property.floors }}</td>
+        </tr>
+        <tr>
+          <td>Capacidad</td>
+          <td>{{ property.capacity }}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% if user.is_authenticated %}
+    <div class="d-grid d-md-flex justify-content-md-end">
+      <input class="btn btn-primary text-right" type="submit" value="Comprar">
+    </div>
+    {% else %}
+    <p class="mt-2">Debes haber ingresado para poder comprar.</p>
+    {% endif %}
+    <p id="published-date" class="mt-2 text-right">Publicado el {{ property.pub_date }}.</p>
+  </div>
+</div>
+<div class="container mt-3 text-center">
+  <h4>Ubicación</h4>
+  <p>{{ property.location }}</p>
+  <div class="row justify-content-center">
+    <iframe
+    width="450"
+    height="250"
+    frameborder="0" style="border:0"
+    class="col col-md-8 col-lg-6"
+    src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q={{ property.location }}&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+    </iframe>
+  </div>
+</div>
 {% endblock %}
