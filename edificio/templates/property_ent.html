@@ -28,7 +28,11 @@
         <div id="property-price" class="mx-auto rounded">{{ property.price|floatformat }}</div>
       </div>
       <div class="col">
+        {% if property.is_visible %}
         <input class="btn btn-primary" type="submit" value="Comprar">
+        {% else %}
+        <div id="property-bought" class="mx-auto rounded">¡Vendido!</div>
+        {% endif %}
       </div>
     </div>
     {% else %}

@@ -1,18 +1,17 @@
 from django.http import Http404
 from django.shortcuts import render
 from .models import Property, EntertainmentProperty, IndustrialProperty, ResidentialProperty
-# from django.views.decorators.clickjacking import xframe_options_exempt
 
 def edificio(request):
-    EntProps = EntertainmentProperty.objects.all()
-    IndProps = IndustrialProperty.objects.all()
-    ResProps = ResidentialProperty.objects.all()
+    EntProps = EntertainmentProperty.objects.filter(is_visible = True)
+    IndProps = IndustrialProperty.objects.filter(is_visible = True)
+    ResProps = ResidentialProperty.objects.filter(is_visible = True)
     context = {'EntProps': EntProps, 'IndProps': IndProps, 'ResProps': ResProps}
     return render(request, 'properties.html', context)
 
 def detail_ent(request, property_id):
     try:
-        property = EntertainmentProperty.objects.get(pk=property_id)
+        property = EntertainmentProperty.objects.get(pk = property_id)
     except Property.DoesNotExist:
         raise Http404("Esta propiedad no existe :(")
     context = {'property': property}
@@ -20,17 +19,17 @@ def detail_ent(request, property_id):
 
 def detail_ind(request, property_id):
     try:
-        property = IndustrialProperty.objects.get(pk=property_id)
+        property = IndustrialProperty.objects.get(pk = property_id)
     except Property.DoesNotExist:
         raise Http404("Esta propiedad no existe :(")
     context = {'property': property}
     return render(request, 'property_ind.html', context)
 
-# @xframe_options_exempt
 def detail_res(request, property_id):
     try:
-        property = ResidentialProperty.objects.get(pk=property_id)
+        property = ResidentialProperty.objects.get(pk = property_id)
     except Property.DoesNotExist:
         raise Http404("Esta propiedad no existe :(")
     context = {'property': property}
     return render(request, 'property_res.html', context)
+
