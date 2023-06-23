@@ -1,31 +1,32 @@
 {% extends './base.html' %}
 {% load static %}
 {% block content %}
-<h1>Portal edificios</h1>
-<p></p>
-<!-- <img src="{% static './img/torre1.jpg' %}" alt=""> -->
-<div id="carouselExample" class="carousel slide">
+<h1>Portal Edificios</h1>
+<h2>Tu portal para los mejores edificios</h2>
+<div class="container">
+  <div id="carouselIndex" class="carousel slide mx-auto" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="{% static './img/edif1.jpg' %}" class="d-block w-80" alt="...">
+        <img src="{% static './img/edif1.jpg' %}" class="d-block carousel-img w-80 mx-auto" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="{% static './img/edif2.jpg' %}" class="d-block w-80" alt="...">
+        <img src="{% static './img/edif2.jpg' %}" class="d-block carousel-img w-80 mx-auto" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="{% static './img/edif3.jpg' %}" class="d-block w-80" alt="...">
+        <img src="{% static './img/edif3.jpg' %}" class="d-block carousel-img w-80 mx-auto" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="{% static './img/edif4.jpg' %}" class="d-block w-80" alt="...">
+        <img src="{% static './img/edif4.jpg' %}" class="d-block carousel-img w-80 mx-auto" alt="...">
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndex" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselIndex" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
   </div>
+</div>
 {% endblock %}
