@@ -28,7 +28,15 @@
         <div id="property-price" class="mx-auto rounded">{{ property.price|floatformat }}</div>
       </div>
       <div class="col">
-        <input class="btn btn-primary" type="submit" value="Comprar">
+        {% if property.is_visible %}
+        <form method="post" action="{% url 'detail_res' property.id %}">
+          {% csrf_token %}
+          <input name="property_id" type="hidden" value="{{ property.id }}">
+          <input class="btn btn-primary" type="submit" value="Comprar">
+        </form>
+        {% else %}
+        <div id="property-bought" class="mx-auto rounded">¡Vendido!</div>
+        {% endif %}
       </div>
     </div>
     {% else %}
