@@ -57,53 +57,6 @@ tbody, td, tfoot, th, thead, tr {
   background-color: var(--accent);
 }
 
-.card-body > h5 {
-  white-space: nowrap;
-  font-size: 1rem;
-  overflow-y: hidden;
-  text-overflow: ellipsis;
-}
-
-.card-body > h5::-webkit-scrollbar {
-  display: none;
-}
-
-.card {
-  width: 15rem;
-  background-color: var(--tertiary-background);
-  color: var(--text);
-}
-
-.card > img {
-  width: 100%;
-  aspect-ratio: 1.5/1;
-  object-fit: cover;
-}
-
-.card-body {
-  padding: 0.5rem;
-}
-
-.list-group-item {
-  font-size: 0.85rem;
-  white-space: nowrap;
-  overflow-y: hidden;
-  text-overflow: ellipsis;
-  color: var(--text);
-  background-color: var(--secondary-background);
-  border: none;
-}
-
-.list-group-item > span {
-  display: block;
-  font-size: 0.75rem;
-  color: var(--secondary-text);
-}
-
-.list-group-item::-webkit-scrollbar {
-  display: none;
-}
-
 a {
   text-decoration: none;
 }
@@ -179,7 +132,8 @@ footer a:hover {
 .carousel-img {
   aspect-ratio: 1.2/1;
   object-fit: cover;
-  height: 300px;
+  /* height: 400px; */
+  width: 100%;
 }
 
 #carouselIndex {
@@ -199,6 +153,53 @@ footer a:hover {
 }
 
 /* edificios */
+
+.card-body > h5 {
+  white-space: nowrap;
+  font-size: 1rem;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-body > h5::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  width: 15rem;
+  background-color: var(--tertiary-background);
+  color: var(--text);
+}
+
+.card > img {
+  width: 100%;
+  aspect-ratio: 1.5/1;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 0.5rem;
+}
+
+.list-group-item {
+  font-size: 0.85rem;
+  white-space: nowrap;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+  color: var(--text);
+  background-color: var(--secondary-background);
+  border: none;
+}
+
+.list-group-item > span {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--secondary-text);
+}
+
+.list-group-item::-webkit-scrollbar {
+  display: none;
+}
 
 .property-list {
   margin-bottom: 1rem;
@@ -238,6 +239,12 @@ footer a:hover {
 #published-date {
   font-size: 0.75rem;
   color: var(--secondary-text);
+}
+
+/* acerca */
+
+#about > p {
+  text-align: justify;
 }
 
 /* small */
