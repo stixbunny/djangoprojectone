@@ -30,15 +30,3 @@ if(current === "contacto") {
     }
   }
 }
-
-// if (current === "contacto") {
-//   select = document.getElementsByTagName("select");
-//   textarea = document.getElementsByTagName("textarea");
-//   select.addEventListener();
-//   if (select.selectedIndex === 1) {
-//     textarea.disabled = true;
-//   }
-//   else (
-//     textarea.disabled = false;
-//   )
-// }
