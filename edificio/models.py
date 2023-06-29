@@ -9,6 +9,8 @@ class Property(models.Model):
     description = models.CharField(max_length=500)
     floors = models.PositiveSmallIntegerField()
     is_visible = models.BooleanField(null=True)
+    def __str__(self) -> str:
+        return f"{self.name} - {self.pub_date.date().isoformat()}"
 
 class ResidentialProperty(Property):
     type = models.CharField(max_length=50, default='residential')
